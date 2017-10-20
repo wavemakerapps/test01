@@ -224,6 +224,12 @@
                     <groupId>com.wavemaker.runtime</groupId>
                     <artifactId>wavemaker-app-runtime-core</artifactId>
                     <version>${wavemaker.studio.version}</version>
+                  <exclusions>
+                    <exclusion>
+                        <groupId>com.google.guava</groupId>
+                        <artifactId>guava</artifactId>
+                    </exclusion>
+                 </exclusions>
                 </dependency>
             </dependencies>
         </profile>

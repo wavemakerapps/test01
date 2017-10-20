@@ -16,6 +16,9 @@ import com.wavemaker.runtime.service.annotations.ExposeToClient;
 import com.wavemaker.runtime.service.annotations.HideFromClient;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import java.net.URL;
+import java.util.Arrays;
+import java.net.URLClassLoader;
 //import com.test01.myjavaservice.model.*;
 
 /**
@@ -38,7 +41,7 @@ public class MyJavaService {
 
     /**
      * This is sample java operation that accepts an input from the caller and responds with "Hello".
-     *
+     * 
      * SecurityService that is Autowired will provide access to the security context of the caller. It has methods like isAuthenticated(),
      * getUserName() and getUserId() etc which returns the information based on the caller context.
      *
@@ -47,7 +50,19 @@ public class MyJavaService {
      */
     public String sampleJavaOperation(String name, HttpServletRequest request) {
             
-        System.setProperty("webdriver.chrome.driver", "//usr//local//Tomcat//apache-tomcat-8.5.15//webapps//test//resources//drivers//chromedriver");      
+        System.setProperty("webdriver.chrome.driver", "//usr//local//Tomcat//apache-tomcat-8.5.15//webapps//test//resources//drivers//chromedriver");   
+        
+        URL[] urLs = ((URLClassLoader) this.getClass().getClassLoader()).getURLs();
+        
+        logger.info("URLS LIST :: " + Arrays.toString(urLs));
+        
+        URL predictionsURL = this.getClass().getClassLoader().getResource("com/google/common/base/Preconditions.class");
+        logger.info("predictionsURL :: {} ", predictionsURL);
+        
+        
+        URL driverServiceURL = this.getClass().getClassLoader().getResource("org/openqa/selenium/remote/service/DriverService.class");
+        logger.info("driverServiceURL :: {} ", driverServiceURL);
+        
 		WebDriver driver = new ChromeDriver();
 	   driver.get("http://www.google.com");
         return driver.getPageSource();
