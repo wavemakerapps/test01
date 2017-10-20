@@ -1,0 +1,24 @@
+{
+  "callSampleJavaOperation" : {
+    "_id" : "wm-callSampleJavaOperation-wm.ServiceVariable-1508414315721",
+    "name" : "callSampleJavaOperation",
+    "owner" : "Page",
+    "category" : "wm.ServiceVariable",
+    "dataBinding" : [ ],
+    "type" : "string",
+    "service" : "MyJavaService",
+    "operation" : "sampleJavaOperation",
+    "operationId" : "MyJavaController_sampleJavaOperation",
+    "operationType" : "get",
+    "serviceType" : "JavaService",
+    "dataSet" : [ ],
+    "isList" : false,
+    "maxResults" : 20,
+    "startUpdate" : false,
+    "autoUpdate" : true,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false,
+    "controller" : "MyJava"
+  }
+}
