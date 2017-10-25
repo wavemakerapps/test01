@@ -20,6 +20,13 @@
             </resource>
             <resource>
                 <filtering>true</filtering>
+                <directory>services/hrdb/src</directory>
+                <excludes>
+                    <exclude>**/*.java</exclude>
+                </excludes>
+            </resource>
+            <resource>
+                <filtering>true</filtering>
                 <directory>services/securityService/src</directory>
                 <excludes>
                     <exclude>**/*.java</exclude>
@@ -104,6 +111,7 @@
                         <configuration>
                             <sources>
                                 <source>services/MyJavaService/src</source>
+                                <source>services/hrdb/src</source>
                                 <source>services/securityService/src</source>
                             </sources>
                         </configuration>
@@ -224,12 +232,12 @@
                     <groupId>com.wavemaker.runtime</groupId>
                     <artifactId>wavemaker-app-runtime-core</artifactId>
                     <version>${wavemaker.studio.version}</version>
-                  <exclusions>
-                    <exclusion>
-                        <groupId>com.google.guava</groupId>
-                        <artifactId>guava</artifactId>
-                    </exclusion>
-                 </exclusions>
+                    <exclusions>
+                        <exclusion>
+                            <groupId>com.google.guava</groupId>
+                            <artifactId>guava</artifactId>
+                        </exclusion>
+                    </exclusions>
                 </dependency>
             </dependencies>
         </profile>
@@ -530,6 +538,11 @@
             <scope>system</scope>
             <systemPath>${basedir}/lib/xml-apis-1.4.01.jar</systemPath>
         </dependency>
+        <dependency>
+            <groupId>org.hsqldb</groupId>
+            <artifactId>hsqldb</artifactId>
+            <version>2.3.3</version>
+        </dependency>
     </dependencies>
     <dependencyManagement>
         <dependencies>
@@ -560,6 +573,6 @@
         <profile.props.file>development.properties</profile.props.file>
         <spring.version>4.3.9.RELEASE</spring.version>
         <spring.security.version>4.1.2.RELEASE</spring.security.version>
-        <wavemaker.studio.version>9.0.1.3800</wavemaker.studio.version>
+        <wavemaker.studio.version>9.0.1.3814</wavemaker.studio.version>
     </properties>
 </project>
