@@ -90,8 +90,14 @@
     "name" : "supportedLocale",
     "owner" : "App",
     "category" : "wm.Variable",
+    "dataBinding" : [ ],
     "dataSet" : {
-      "en" : "English"
+      "en" : "English",
+      "af-na" : "Afrikaans (Namibië)",
+      "af-za" : "Afrikaans (Suid-Afrika)",
+      "de-li" : "Deutsch (Liechtenstein)",
+      "de-de" : "Deutsch (Deutschland)",
+      "en-as" : "English (American Samoa)"
     },
     "type" : "string",
     "isList" : false,

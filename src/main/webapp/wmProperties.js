@@ -7,7 +7,7 @@ var _WM_APP_PROPERTIES = {
   "name" : "test01",
   "platformType" : "WEB",
   "securityEnabled" : "true",
-  "supportedLanguages" : "en",
+  "supportedLanguages" : "en,af-na,af-za,de-li,de-de,en-as",
   "timeFormat" : "",
   "type" : "APPLICATION",
   "version" : "1.0"

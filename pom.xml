@@ -13,6 +13,13 @@
             </resource>
             <resource>
                 <filtering>true</filtering>
+                <directory>services/GlobalWeather/src</directory>
+                <excludes>
+                    <exclude>**/*.java</exclude>
+                </excludes>
+            </resource>
+            <resource>
+                <filtering>true</filtering>
                 <directory>services/MyJavaService/src</directory>
                 <excludes>
                     <exclude>**/*.java</exclude>
@@ -110,6 +117,7 @@
                         </goals>
                         <configuration>
                             <sources>
+                                <source>services/GlobalWeather/src</source>
                                 <source>services/MyJavaService/src</source>
                                 <source>services/hrdb/src</source>
                                 <source>services/securityService/src</source>
@@ -285,6 +293,11 @@
             <artifactId>servlet-api</artifactId>
             <version>2.5</version>
             <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.hsqldb</groupId>
+            <artifactId>hsqldb</artifactId>
+            <version>2.3.3</version>
         </dependency>
         <dependency>
             <groupId>cglib-nodep-3.2.4</groupId>
@@ -538,11 +551,6 @@
             <scope>system</scope>
             <systemPath>${basedir}/lib/xml-apis-1.4.01.jar</systemPath>
         </dependency>
-        <dependency>
-            <groupId>org.hsqldb</groupId>
-            <artifactId>hsqldb</artifactId>
-            <version>2.3.3</version>
-        </dependency>
     </dependencies>
     <dependencyManagement>
         <dependencies>
@@ -573,6 +581,6 @@
         <profile.props.file>development.properties</profile.props.file>
         <spring.version>4.3.9.RELEASE</spring.version>
         <spring.security.version>4.1.2.RELEASE</spring.security.version>
-        <wavemaker.studio.version>9.0.1.3814</wavemaker.studio.version>
+        <wavemaker.studio.version>9.0.2.3840</wavemaker.studio.version>
     </properties>
 </project>
