@@ -23,6 +23,17 @@
     "operation" : "gotoPage",
     "pageName" : "Main"
   },
+  "goToPage_mypage" : {
+    "_id" : "wm-goToPage_mypage-wm.NavigationVariable-1510056692644",
+    "name" : "goToPage_mypage",
+    "owner" : "App",
+    "category" : "wm.NavigationVariable",
+    "dataBinding" : [ ],
+    "operation" : "gotoPage",
+    "pageName" : "mypage",
+    "dataSet" : [ ],
+    "pageTransitions" : "none"
+  },
   "loggedInUser" : {
     "_id" : "wm-loggedInUser-wm.Variable-1508855862823",
     "name" : "loggedInUser",
