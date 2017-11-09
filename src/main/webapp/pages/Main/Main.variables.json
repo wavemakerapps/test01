@@ -20,5 +20,22 @@
     "transformationRequired" : false,
     "saveInPhonegap" : false,
     "controller" : "MyJava"
+  },
+  "test" : {
+    "_id" : "wm-test-wm.Variable-1510221772491",
+    "name" : "test",
+    "owner" : "Page",
+    "category" : "wm.Variable",
+    "dataBinding" : [ {
+      "target" : "dataValue",
+      "value" : "test_value",
+      "type" : "string"
+    } ],
+    "dataSet" : {
+      "dataValue" : "test_value"
+    },
+    "type" : "string",
+    "isList" : false,
+    "saveInPhonegap" : false
   }
 }
